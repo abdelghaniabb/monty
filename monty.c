@@ -1,9 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "monty.h"
+#include <string.h>
 
-/* Create an array of instructions*/
+/* array of instructions*/
 instruction_t instructions[] = {
 	{"push", push},
 	{"pall", pall}
@@ -13,6 +11,7 @@ instruction_t instructions[] = {
  * main - check code
  * @argc: number of arguments passed to the program
  * @argv: pointer array which points to each argument passed to the program
+ *
  * Return: Always 0 (success)
  */
 int main(int argc, char *argv[])
@@ -22,12 +21,14 @@ int main(int argc, char *argv[])
 	unsigned int line_number = 1;
 	stack_t *stack = NULL;
 
+	/* check the number of arguments given by the user */
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 
+	/* open the file */
 	file = fopen(argv[1], "r");
 	if (file == NULL)
 	{
@@ -45,3 +46,4 @@ int main(int argc, char *argv[])
 	}
 	return (0);
 }
+

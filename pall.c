@@ -1,21 +1,23 @@
 #include "monty.h"
 
-void pall(stack_t **stack, unsigned int line_number)
+/**
+ * pall -  prints all the values on the stack,
+ * starting from the top of the stack.
+ * @stack: the head of the doubly linked list represented the stack
+ * @line_number: the line number in the file
+ *
+ * Return: void
+ */
+void pall(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
 	stack_t *current;
 
-	if (stack == NULL)
-		return;
-	printf("this is pop\n");
+	/* scroll in the linked list and print all the values starting from the top*/
 	current = *stack;
-	/*while (current->next != NULL)
-		current = current->next;*/
-	printf("this is pop\n");
 	while (current != NULL)
 	{
 		printf("%i\n", current->n);
-		current = current->prev;
+		current = current->next;
 	}
-
-	printf("this is pop\n");
 }
+

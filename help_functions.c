@@ -28,12 +28,7 @@ int _atoi(char *s)
 	return (sign * result);
 }
 
-/*
-char *_strtok(char *str, const char *delim)
-{
-	return (NULL);
-}
-*/
+
 /**
  * _strcmp - copies a string
  * @s1: the destination string

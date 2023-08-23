@@ -2,35 +2,29 @@
 #include <string.h>
 
 /**
- * push -
- * @stack:
- * @line_number:
+ * push - pushes an element to the stack.
+ * @stack: the head of the doubly linked list represented the stack
+ * @line_number: the line number in the file
  *
- * Return:
+ * Return: void
  */
 void push(stack_t **stack, unsigned int line_number)
 {
 	char *value_str;
 	int value;
-	stack_t *new, *current;
+	stack_t *new;
 
+	/* extract the integer argument given to push */
 	value_str = strtok(NULL, " \t\n");
 	if (value_str == NULL)
 	{
 		fprintf(stderr, "L%i: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	while (*value_str != '\0')
-	{
-		if (_isdigit(*value_str) == 0)
-		{
-			fprintf(stderr, "L%i: usage: push integer\n", line_number);
-			exit(EXIT_FAILURE);
-		}
-		value_str++;
-	}
+
 	value = _atoi(value_str);
 
+	/* allocate memory to the new node */
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{
@@ -39,31 +33,16 @@ void push(stack_t **stack, unsigned int line_number)
 	}
 	new->n = value;
 	new->prev = NULL;
-	new->next = *stack;
-	if (*stack == NULL)
-	{
-		(*stack)->prev = new;
-		return;
-	}
-	*stack = new;
-	/*if (stack == NULL)
-	{
-	printf("this is push1\n");
-		stack = new;
-		stack->next = NULL;
-		stack->prev = NULL;
-		printf("this is push1\n");
-		return;
-	}
+	new->next = NULL;
 
-	current = *stack;
-	while (current->next != NULL)
+	/* add the new node to the stack*/
+	if (*stack == NULL)
+		*stack = new;
+	else
 	{
-		current = current->next;
+		new->next = *stack;
+		(*stack)->prev = new;
+		*stack = new;
 	}
-	new->prev = current;
-	current->next = new;
-*/
-	printf("this is push\n");
-	return;
 }
+

@@ -20,6 +20,7 @@ typedef struct stack_s
         struct stack_s *next;
 } stack_t;
 
+
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -45,6 +46,7 @@ void execute_opcode(char *opcode, stack_t **stack, unsigned int line_number);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 
-/* Create an array of instructions*/
+/* declare the array of instructions as a globale variable*/
 extern instruction_t instructions[];
 #endif
+
