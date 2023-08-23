@@ -18,9 +18,10 @@ void execute_opcode(char *opcode, stack_t **stack, unsigned int line_number)
 		{"push", push},
 		{"pall", pall}
 	};
+	int instructions_lenght = 2;
 
 	/* check if the opcode is within the array of instructions*/
-	for (i = 0; i < 3; i++)
+	for (i = 0; i < instructions_lenght; i++)
 	{
 		if (_strcmp(opcode, instructions[i].opcode) == 0)
 		{
