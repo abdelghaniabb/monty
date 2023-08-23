@@ -21,7 +21,6 @@ void push(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-
 	value = _atoi(value_str);
 
 	/* allocate memory to the new node */
@@ -34,12 +33,19 @@ void push(stack_t **stack, unsigned int line_number)
 	new->n = value;
 	new->prev = NULL;
 	new->next = NULL;
-
 	/* add the new node to the stack*/
 	if (*stack == NULL)
 		*stack = new;
+	else if ((*stack)->prev == NULL)
+	{
+		new->next = *stack;
+		(*stack)->prev = new;
+		*stack = new;
+	}
 	else
 	{
+		while ((*stack)->prev != NULL)
+			*stack = (*stack)->prev;
 		new->next = *stack;
 		(*stack)->prev = new;
 		*stack = new;
