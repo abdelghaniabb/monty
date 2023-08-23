@@ -15,6 +15,8 @@ void pint(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
+	while ((*stack)->prev != NULL)
+		*stack = (*stack)->prev;
 
 	printf("%i\n", (*stack)->n);
 }
