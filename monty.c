@@ -37,7 +37,8 @@ int main(int argc, char *argv[])
 	while (fgets(line, 50 * sizeof(char), file) != NULL)
 	{
 		opcode = strtok(line, " \t\n");
-		execute_opcode(opcode, &stack, line_number);
+		if (opcode != NULL)
+			execute_opcode(opcode, &stack, line_number);
 		line_number++;
 	}
 
