@@ -18,7 +18,7 @@ void push(stack_t **stack, unsigned int line_number)
 	value_str = strtok(NULL, " \t\n");
 	if (value_str == NULL)
 	{
-		fprintf(stderr, "L%i: usage: push integer\n", line_number);
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
