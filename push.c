@@ -13,21 +13,21 @@ void push(stack_t **stack, unsigned int line_number)
 	char *value_str;
 	int value;
 	stack_t *new;
-
 	/* extract the integer argument given to push */
 	value_str = strtok(NULL, " \t\n");
 	if (value_str == NULL)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
 	value = _atoi(value_str);
-
 	/* allocate memory to the new node */
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
+		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
 	new->n = value;
