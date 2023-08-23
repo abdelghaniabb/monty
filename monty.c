@@ -44,6 +44,8 @@ int main(int argc, char *argv[])
 		execute_opcode(opcode, &stack, line_number);
 		line_number++;
 	}
+
+	fclose(file);
 	return (0);
 }
 
