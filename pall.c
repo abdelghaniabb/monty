@@ -14,6 +14,8 @@ void pall(stack_t **stack, unsigned int line_number __attribute__((unused)))
 
 	/* scroll in the linked list and print all the values starting from the top*/
 	current = *stack;
+	while (current->prev != NULL)
+		current = current->prev;
 	while (current != NULL)
 	{
 		printf("%d\n", current->n);
