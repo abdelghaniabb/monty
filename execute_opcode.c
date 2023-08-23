@@ -13,6 +13,12 @@ void execute_opcode(char *opcode, stack_t **stack, unsigned int line_number)
 {
 	int i;
 
+	/* create an array of instructions*/
+	instruction_t instructions[] = {
+		{"push", push},
+		{"pall", pall}
+	};
+
 	/* check if the opcode is within the array of instructions*/
 	for (i = 0; i < 3; i++)
 	{

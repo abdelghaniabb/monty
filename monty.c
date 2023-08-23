@@ -1,11 +1,7 @@
 #include "monty.h"
 #include <string.h>
 
-/* array of instructions*/
-instruction_t instructions[] = {
-	{"push", push},
-	{"pall", pall}
-};
+
 
 /**
  * main - check code
