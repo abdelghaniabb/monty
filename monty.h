@@ -41,6 +41,7 @@ int _atoi(char *str);
 char *_strtok(char *str, const char *delim);
 int _strcmp(char *s1, char *s2);
 int _isdigit(int c);
+void free_stack(stack_t **stack);
 
 void execute_opcode(char *opcode, stack_t **stack, unsigned int line_number);
 void push(stack_t **stack, unsigned int line_number);
