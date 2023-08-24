@@ -87,3 +87,4 @@ void free_stack(stack_t **stack)
 	}
 
 }
+
