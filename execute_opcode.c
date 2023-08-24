@@ -20,9 +20,10 @@ void execute_opcode(char *opcode, stack_t **stack, unsigned int line_number)
 		{"pint", pint},
 		{"pop", pop},
 		{"swap", swap},
-		{"add", add}
+		{"add", add},
+		{"nop", nop}
 	};
-	int instructions_lenght = 6;
+	int instructions_lenght = 7;
 
 	/* check if the opcode is within the array of instructions*/
 	for (i = 0; i < instructions_lenght; i++)
