@@ -19,6 +19,6 @@ void pint(stack_t **stack, unsigned int line_number)
 	while ((*stack)->prev != NULL)
 		*stack = (*stack)->prev;
 
-	printf("%d\n", (*stack)->n);
+	fprintf(stdout, "%d\n", (*stack)->n);
 }
 
