@@ -2,7 +2,7 @@
 #include <string.h>
 
 void noyhinb(void);
-FILE *file;
+FILE *file = NULL;
 /**
  * main - check code
  * @argc: number of arguments passed to the program
