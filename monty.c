@@ -1,8 +1,8 @@
 #include "monty.h"
 #include <string.h>
 
-
-
+void noyhinb(void);
+FILE *file;
 /**
  * main - check code
  * @argc: number of arguments passed to the program
@@ -12,7 +12,7 @@
  */
 int main(int argc, char *argv[])
 {
-	FILE *file;
+
 	char *opcode, line[50];
 	unsigned int line_number = 1;
 	stack_t *stack = NULL;

@@ -35,7 +35,8 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-
+/* declare flile as a globale variable */
+extern FILE *file;
 
 int _atoi(char *str);
 char *_strtok(char *str, const char *delim);
