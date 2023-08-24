@@ -37,11 +37,6 @@ void execute_opcode(char *opcode, stack_t **stack, unsigned int line_number)
 			instructions[i].f(stack, line_number);
 			return;
 		}
-		/* treat this line as a comment (don’t do anything).*/
-		if (_strcmp(opcode, "#") == 0)
-		{
-			return;
-		}
 	}
 
 	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);

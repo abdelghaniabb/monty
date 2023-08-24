@@ -37,6 +37,10 @@ int main(int argc, char *argv[])
 	/* read the file and ecxicute the opcode*/
 	while (fgets(line, 50 * sizeof(char), file) != NULL)
 	{
+		/* treat this line as a comment (don’t do anything).*/
+		if (line[0] == '#')
+			continue;
+
 		opcode = strtok(line, " \t\n");
 		if (opcode != NULL)
 			execute_opcode(opcode, &stack, line_number);
