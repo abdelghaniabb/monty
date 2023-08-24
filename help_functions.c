@@ -65,7 +65,7 @@ int _isdigit(int c)
 }
 
 /**
- * free_stack - free all the allocate memory
+ * free_stack - free all the allocate memory and close the opened file
  * @stack: the head of the doubly linked list represented the stack
  *
  * Return: void
@@ -73,6 +73,8 @@ int _isdigit(int c)
 void free_stack(stack_t **stack)
 {
 	stack_t *current;
+
+	fclose(file);
 
 	while ((*stack)->prev != NULL)
 		*stack = (*stack)->prev;

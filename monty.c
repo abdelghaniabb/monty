@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
+		free_stack(&stack);
 		exit(EXIT_FAILURE);
 	}
 
@@ -29,7 +30,7 @@ int main(int argc, char *argv[])
 	if (file == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
-		fclose(file);
+		free_stack(&stack);
 		exit(EXIT_FAILURE);
 	}
 
@@ -43,7 +44,6 @@ int main(int argc, char *argv[])
 	}
 
 	free_stack(&stack);
-	fclose(file);
 	return (0);
 }
 
