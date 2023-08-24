@@ -43,6 +43,7 @@ char *_strtok(char *str, const char *delim);
 int _strcmp(char *s1, char *s2);
 int _isdigit(int c);
 void free_stack(stack_t **stack);
+int _putchar(char c);
 
 void execute_opcode(char *opcode, stack_t **stack, unsigned int line_number);
 void push(stack_t **stack, unsigned int line_number);
@@ -56,6 +57,7 @@ void sub(stack_t **stack, unsigned int line_number);
 void _div(stack_t **stack, unsigned int line_number);
 void mul(stack_t **stack, unsigned int line_number);
 void mod(stack_t **stack, unsigned int line_number);
+void pchar(stack_t **stack, unsigned int line_number);
 
 
 #endif

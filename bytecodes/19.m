@@ -6,3 +6,5 @@ sub
 pall
 # mod
 pall
+push 65
+pchar
