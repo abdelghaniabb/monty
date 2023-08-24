@@ -24,7 +24,8 @@ void execute_opcode(char *opcode, stack_t **stack, unsigned int line_number)
 		{"nop", nop},
 		{"sub", sub},
 		{"div", _div},
-		{"mul", mul}
+		{"mul", mul},
+		{"mod", mod}
 	};
 	int instructions_lenght = 10;
 
