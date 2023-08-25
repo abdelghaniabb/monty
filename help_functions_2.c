@@ -10,6 +10,9 @@ void free_stack(stack_t **stack)
 {
 	stack_t *current;
 
+	if (file == NULL || *stack == NULL)
+		return;
+
 	fclose(file);
 
 	while ((*stack)->prev != NULL)
