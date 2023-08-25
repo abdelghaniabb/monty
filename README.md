@@ -25,7 +25,7 @@
 
 | Task | File |
 | ---- | ---- |
-| 0. push, pall | [push.c](./) | [pall.c](./) |
+| 0. push, pall | [push.c](./) |
 | 1. pint | [SOON](./) |
 | 2. pop | [SOON](./) |
 | 3. swap | [SOON](./) |
