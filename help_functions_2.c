@@ -28,7 +28,7 @@ void free_stack(stack_t **stack)
 }
 
 /**
- * free_stack - free all the allocate memory without closing the opened file
+ * _free_stack - free all the allocate memory without closing the opened file
  * @stack: the head of the doubly linked list represented the stack
  *
  * Return: void
