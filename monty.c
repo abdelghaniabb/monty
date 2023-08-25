@@ -13,7 +13,7 @@ FILE *file = NULL;
 int main(int argc, char *argv[])
 {
 
-	char *opcode, line[50];
+	char *opcode, line[100];
 	unsigned int line_number = 1;
 	stack_t *stack = NULL;
 
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 	}
 
 	/* read the file and ecxicute the opcode*/
-	while (fgets(line, 50 * sizeof(char), file) != NULL)
+	while (fgets(line, 100 * sizeof(char), file) != NULL)
 	{
 		/* treat this line as a comment (don’t do anything).*/
 		if (line[0] == '#')
