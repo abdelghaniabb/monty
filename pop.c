@@ -31,7 +31,6 @@ void pop(stack_t **stack, unsigned int line_number)
 	else
 	{
 		_free_stack(stack);
-		*stack = NULL;
 	}
 }
 
