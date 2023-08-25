@@ -43,8 +43,10 @@ char *_strtok(char *str, const char *delim);
 int _strcmp(char *s1, char *s2);
 int _isnumber(char *str);
 int _strlen(char *s);
-void free_stack(stack_t **stack);
 int _putchar(char c);
+void free_stack(stack_t **stack);
+void _free_stack(stack_t **stack);
+
 
 void execute_opcode(char *opcode, stack_t **stack, unsigned int line_number);
 void push(stack_t **stack, unsigned int line_number);

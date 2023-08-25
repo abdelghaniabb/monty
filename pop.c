@@ -29,6 +29,9 @@ void pop(stack_t **stack, unsigned int line_number)
 		free(tmp);
 	}
 	else
-		free_stack(stack);
+	{
+		_free_stack(stack);
+		*stack = NULL;
+	}
 }
 
