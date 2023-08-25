@@ -15,7 +15,7 @@ void push(stack_t **stack, unsigned int line_number)
 	stack_t *new;
 	/* extract the integer argument given to push */
 	value_str = strtok(NULL, " \t\n");
-	if (value_str == NULL)
+	if (value_str == NULL || _isnumber(value_str) == 0)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		free_stack(stack);

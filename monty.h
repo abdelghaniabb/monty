@@ -41,7 +41,8 @@ extern FILE *file;
 int _atoi(char *str);
 char *_strtok(char *str, const char *delim);
 int _strcmp(char *s1, char *s2);
-int _isdigit(int c);
+int _isnumber(char *str);
+int _strlen(char *s);
 void free_stack(stack_t **stack);
 int _putchar(char c);
 

@@ -51,43 +51,45 @@ int _strcmp(char *s1, char *s2)
 }
 
 /**
- * _isdigit - checks for a digit (0 through 9)
- * @c: the character to check
+ * _isnumber - checks if the string is a number
+ * @str: the string to check
  *
  * Return: 1 if c is a digit, 0 otherwise
  */
-int _isdigit(int c)
+int _isnumber(char *str)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
+	int i;
+	int len = _strlen(str);
 
-	else
-		return (0);
+	for (i = 0; i < len; i++)
+	{
+		if ((*str < '0' || *str > '9') && *str != '-')
+			return (0);
+		str++;
+	}
+
+	return (1);
 }
 
 /**
- * free_stack - free all the allocate memory and close the opened file
- * @stack: the head of the doubly linked list represented the stack
+ * _strlen -  returns the length of a string
+ * @s: string
  *
- * Return: void
+ * Return: length of a string
  */
-void free_stack(stack_t **stack)
+int _strlen(char *s)
 {
-	stack_t *current;
+	int len = 0;
 
-	fclose(file);
-
-	while ((*stack)->prev != NULL)
-		*stack = (*stack)->prev;
-
-	while (*stack != NULL)
+	while (*s != '\0')
 	{
-		current = *stack;
-		*stack = (*stack)->next;
-		free(current);
+		len++;
+		s++;
 	}
 
+	return (len);
 }
+
 
 /**
  * _putchar - writes the character c to stdout
