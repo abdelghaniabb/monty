@@ -42,6 +42,6 @@ void pstr(stack_t **stack, unsigned int line_number __attribute__((unused)))
 		_putchar(current->n);
 		current = current->next;
 	}
-	
+
 }
 
