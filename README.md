@@ -25,19 +25,20 @@
 
 | Task | File |
 | ---- | ---- |
-| 0. push, pall | [push.c](./push.c) | [pall.c](./pall.c) |
-| 1. pint | [SOON](./) |
-| 2. pop | [SOON](./) |
-| 3. swap | [SOON](./) |
-| 4. add | [SOON](./) |
-| 5. nop | [SOON](./) |
-| 6. sub | [SOON](./) |
-| 7. div | [SOON](./) |
-| 8. mul | [SOON](./) |
-| 9. mod | [SOON](./) |
-| 10. comments | [SOON](./) |
-| 11. pchar | [SOON](./) |
-| 12. pstr | [SOON](./) |
+| 0. push | [push.c](./push.c) |
+| 0. pall | [pall.c](./pall.c) |
+| 1. pint | [pint.c](./pint.c) |
+| 2. pop | [pop.c](./pop.c) |
+| 3. swap | [swap.c](./swap.c) |
+| 4. add | [add.c](./add.c) |
+| 5. nop | [nop.c](./nop.c) |
+| 6. sub | [sub.c](./sub.c) |
+| 7. div | [div.c](./div.c) |
+| 8. mul | [mul.c](./mul.c) |
+| 9. mod | [mod.c](./mod.c) |
+| 10. comments | [comments](./monty.c) |
+| 11. pchar | [pchar.c](./pchar.c) |
+| 12. pstr | [pstr.c](./pstr.c) |
 | 13. rotl | [SOON](./) |
 | 14. rotr | [SOON](./) |
 | 15. stack, queue | [SOON](./) |
