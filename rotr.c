@@ -8,26 +8,31 @@
  *
  * Return: void
  */
-void rotr(stack_t **stack, unsigned int line_number)
+void rotr(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
-    stack_t *current;
+	stack_t *current;
+	int tmp1, tmp2;
 
-    if (*stack == NULL)
-        return;
+	if (*stack == NULL)
+		return;
 
-    /* go to the the head of the stack if the *stack does not point to the head*/
-    while ((*stack)->prev != NULL)
-    {
+	/* go to the the head of the stack if the *stack does not point to the head*/
+	while ((*stack)->prev != NULL)
         *stack = (*stack)->prev;
-    }
 
-    current = *stack;
-    current = current->next;
-    while (current != NULL)
-    {
-        current->n = current->prev->n;
-        current = current->next;
-    }
+	current = *stack;
+	tmp1 = current->n;
+	current = current->next;
+	while (current->next != NULL)
+	{
+		tmp2 = tmp1;
+		tmp1 = current->n;
+		current->n = tmp2;
+		current = current->next;
+	}
 
-    (*stack)->n = current->prev->n;
+	(*stack)->n = current->n;
+	current->n = tmp1;
+
 }
+

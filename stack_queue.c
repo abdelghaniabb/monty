@@ -8,7 +8,7 @@
  *
  * Return: void
  */
-void stack(stack_t **stack, unsigned int line_number)
+void _stack(stack_t **stack, unsigned int line_number)
 {
     /* This is the default behavior of the program. so we have nothing to change*/
     nop(stack, line_number);
@@ -21,7 +21,7 @@ void stack(stack_t **stack, unsigned int line_number)
  *
  * Return: void
  */
-void queue(stack_t **stack, unsigned int line_number)
+void queue(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
      stack_t *new, *current_old, *current_new;
 
@@ -53,5 +53,5 @@ void queue(stack_t **stack, unsigned int line_number)
     *stack = new;
     (*stack)->next = new->next;
     (*stack)->prev = new->prev;
-    _free_stack(new);
+
 }
