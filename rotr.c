@@ -18,7 +18,7 @@ void rotr(stack_t **stack, unsigned int line_number __attribute__((unused)))
 
 	/* go to the the head of the stack if the *stack does not point to the head*/
 	while ((*stack)->prev != NULL)
-        *stack = (*stack)->prev;
+		*stack = (*stack)->prev;
 
 	current = *stack;
 	tmp1 = current->n;

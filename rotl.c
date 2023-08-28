@@ -2,7 +2,7 @@
 
 /**
  * rotl - rotates the stack to the top
- * The top element of the stack becomes the last one, and 
+ * The top element of the stack becomes the last one, and
  * the second top element of the stack becomes the first one
  * @stack: the head of the doubly linked list represented the stack
  * @line_number: the line number in the file
